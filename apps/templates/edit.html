@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit</title>
+	<style>
+		body{
+			background-image: linear-gradient(to right, red, yellow);
+		}
+		.box{
+			background-color: rgb(0, 0, 0, 0.3);
+			position: fixed;
+			text-align: center;
+			margin-left: 18%;
+			margin-right: 20%;
+			width: 60%;
+			padding: 10px;
+		}
+		.text{
+			border-radius: 10px;
+			border-width: 2px 2px 2px 2px black;
+			font-size: 22px;
+			margin-bottom: 10px;
+		}
+		.para{
+			font-size: 20px;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<h2>Update the data here</h2>
+	<form action="/update/{{item.id}}" method="get">
+		<h4>Name</h4>
+		<input type="text" name="name" class="text" value="{{ item.name }}" /><br>
+		<h4>Age</h4>
+		<input type="text" name="age" class="text" value="{{ item.age }}" /><br>
+		<h4>Phone Number</h4>
+		<input type="text" name="num" class="text" value="{{ item.num }}" /><br>
+		<h4>Email id</h4>
+		<input type="email" name="mail" class="text" value="{{ item.mail }}" /><br>
+		<center><input type="submit" value="Update Data"></center>
+	</form>
+</div>
+</body>
+</html>

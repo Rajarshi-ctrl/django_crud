@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dashboard</title>
+	<style>
+		body{
+			background-image: linear-gradient(to right, red, yellow);
+		}
+	</style>
+</head>
+<body>
+
+<table cellpadding = "15px">
+	{% for i in data %}
+<tr>
+    <td> {{i.id}} </td>
+    <td> {{i.name}} </td>
+    <td> {{i.age}} </td>
+    <td> {{i.num}} </td>
+    <td> {{i.mail}} </td>
+   	<td> <a href="/edit/{{i.id}}">Edit</a> </td>
+    <td> <a href="/delete/{{i.id}}">Delete</a> </td>
+</tr>
+	{% endfor %}
+</table>
+<center><a href="/"> Add New Data </a></center>
+
+</body>
+</html>
